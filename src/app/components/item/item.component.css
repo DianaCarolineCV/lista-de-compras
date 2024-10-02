@@ -1,0 +1,37 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.item.bought {
+  background-color: #e0ffe0;
+  text-decoration: line-through;
+}
+
+.toggle-btn, .remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+ 
+}
+
+.remove-btn img {
+  width: 30px; 
+  height: 30px; 
+}
+
+
+
+input {
+  flex: 1;
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

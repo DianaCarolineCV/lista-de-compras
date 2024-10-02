@@ -1,0 +1,34 @@
+<div class="lista-container"> 
+  <h1>Lista de Compras</h1>
+  <input 
+    [(ngModel)]="newItemName" 
+    placeholder="Adicione um item..." 
+    (keyup.enter)="addItem()" 
+    class="new-item-input"
+  />
+  <button class="add-btn" (click)="addItem()">Adicionar</button>
+
+  <h2>Não comprados</h2>
+  <ng-container *ngFor="let item of items; let i = index">
+    <div *ngIf="!item.bought">
+      <app-item 
+        [item]="item" 
+        [index]="i" 
+        (remove)="removeItem($event)" 
+        (toggleBought)="toggleBought($event)"
+      ></app-item>
+    </div>
+  </ng-container>
+
+  <h2>Comprados</h2>
+  <ng-container *ngFor="let item of items; let i = index">
+    <div *ngIf="item.bought">
+      <app-item 
+        [item]="item" 
+        [index]="i" 
+        (remove)="removeItem($event)" 
+        (toggleBought)="toggleBought($event)"
+      ></app-item>
+    </div>
+  </ng-container>
+</div>
