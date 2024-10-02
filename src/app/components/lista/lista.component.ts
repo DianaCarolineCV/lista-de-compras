@@ -12,12 +12,19 @@ import { ItemComponent } from '../item/item.component';
 })
 export class ListaComponent {
   items: { name: string; bought: boolean }[] = [];
-  newItemName: string = ''; 
+  newItemName: string = '';
+  errorMessage: string = ''; 
 
   addItem() {
     if (this.newItemName.trim()) {
       this.items.push({ name: this.newItemName, bought: false });
-      this.newItemName = ''; 
+      this.newItemName = '';
+      this.errorMessage = ''; 
+    } else {
+      this.errorMessage = 'Escreva um item para adiciona-lo na lista!'; 
+      setTimeout(() => {
+        this.errorMessage = '';
+      }, 1000); 
     }
   }
 
