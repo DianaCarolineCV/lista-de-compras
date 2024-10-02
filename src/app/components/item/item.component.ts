@@ -16,17 +16,17 @@ export class ItemComponent {
   @Output() remove = new EventEmitter<number>();
   @Output() toggleBought = new EventEmitter<number>();
 
-  itemName: string = ''; // Nova propriedade para armazenar o nome do item
+  itemName: string = ''; 
 
   ngOnInit() {
     if (this.item) {
-      this.itemName = this.item.name; // Inicializa itemName com o valor do item
+      this.itemName = this.item.name; 
     }
   }
 
   editName(newName: string) {
     if (this.item) {
-      this.item.name = newName; // Atualiza diretamente o objeto item
+      this.item.name = newName; 
     }
   }
 

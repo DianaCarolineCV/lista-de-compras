@@ -12,12 +12,12 @@ import { ItemComponent } from '../item/item.component';
 })
 export class ListaComponent {
   items: { name: string; bought: boolean }[] = [];
-  newItemName: string = ''; // Para armazenar o novo nome do item
+  newItemName: string = ''; 
 
   addItem() {
     if (this.newItemName.trim()) {
       this.items.push({ name: this.newItemName, bought: false });
-      this.newItemName = ''; // Limpa o campo após adicionar
+      this.newItemName = ''; 
     }
   }
 
