@@ -5,33 +5,82 @@
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto';
 }
 
 h1 {
   text-align: center;
   color: #333;
+  font-family: 'Roboto';
+}
+
+.input-lista{
+  display: flex;
+  gap: 10px;
+ 
+
 }
 
 .new-item-input {
   width: calc(100% - 100px);
-  padding: 10px;
+  padding: 10px 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 10px;
+  font-family: 'Roboto';
+  
 }
 
 .add-btn {
   padding: 10px 15px;
   border: none;
-  background-color: #28a745;
+  background-color: #9575CD;
   color: white;
+  font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Roboto';
 }
 
 .add-btn:hover {
-  background-color: #218838;
+  background-color: #7E57C2;
 }
+
+.lista-items {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.lista-nao-comprados, .lista-comprados {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+h2 {
+  margin-bottom: 1rem; 
+}
+
+app-item {
+  margin-bottom: 0.5rem; 
+}
+
+@media (min-width: 768px) {
+  .lista-items {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .lista-nao-comprados, .lista-comprados {
+    flex: 1;
+    margin-right: 1rem; 
+  }
+
+  .lista-comprados {
+    margin-right: 0; 
+  }
+}
+ 
 
 h2 {
   margin-top: 20px;
@@ -45,5 +94,9 @@ h2 {
 
   .new-item-input {
     width: calc(100% - 50px);
+  }
+
+  .lista-nao-comprados, .lista-comprados {
+    width: 100%;
   }
 }
